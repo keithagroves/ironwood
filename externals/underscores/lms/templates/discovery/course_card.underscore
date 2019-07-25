@@ -28,7 +28,7 @@
                   <span style="height:16px;" class="course-organization"><%= price %></span>
                   <span id="rating" class="course-organization"><%= stars[content.number] %></span>
                 <% } else { %>
-                  <span class="course-organization"><strong>Course Access Restricted</strong><br/>contact info@enstructo for an invitation</span>
+                  <span class="course-organization"><strong>Course Access Restricted</strong><br/><span style="font-size:85%;">contact info@enstructo for an invitation</span></span>
                 <% }; %>
             </h2>
         </section>
