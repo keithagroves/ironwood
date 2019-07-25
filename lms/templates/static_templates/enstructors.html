@@ -2,6 +2,7 @@
 <%! 
 from django.utils.translation import ugettext as _ 
 from django.core.urlresolvers import reverse
+from django.conf import settings
 %>
 <%inherit file="../main.html" />
 
@@ -137,7 +138,7 @@ input:-moz-placeholder { text-overflow: ellipsis; }
               </tr>
               % for enst, info in enst_list.items():
                 <tr>
-                  <td><a target="_blank" href="http://10.211.55.104/admin/auth/user/${enst}/change/">${enst}</a></td>
+                  <td><a target="_blank" href="${settings.LMS_ROOT_URL}/admin/auth/user/${enst}/change/">${enst}</a></td>
                   <td id="${enst}-username">${info["username"]}</td>
                   <td>${info["name"]}</td>
                   <td>${info["email"]}</td>
