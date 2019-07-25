@@ -1,0 +1,59 @@
+{% load static %}
+{% load core_extras %}
+
+<footer class="footer print-hide" style="padding: 25px 2% 30px">
+  <div class="wrapper-footer">
+  <div class="colophon">
+        <nav class="nav-colophon" aria-label="About">
+          <ol>
+              <li class="nav-colophon-01">
+                <a id="about" href="{{lms_base_url}}/about">About</a>
+              </li>
+              <li class="nav-colophon-02">
+                <a id="contact" href="{{lms_base_url}}/support/contact_us">Contact</a>
+              </li>
+              <li class="nav-colophon-03">
+                <a id="faq" href="{{lms_base_url}}/faq">FAQ</a>
+              </li>
+              <li class="nav-colophon-04">
+                <a id="jobs" href="{{lms_base_url}}/jobs">Teach With Us</a>
+              </li>
+              <li class="nav-colophon-05">
+                <a id="rankings" href="{{lms_base_url}}/rankings">Rankings</a>
+              </li>
+          </ol>
+        </nav>
+
+
+        <div class="wrapper-logo">
+          <p class="logo">
+            <a href="{{lms_base_url}}">
+              <img height="50" alt="{{platform_name}}" src="{% static 'images/logo.png' %}">
+            </a>
+          </p>
+          <p class="copyright">©2019 {{platform_name}}.  All rights reserved except where noted.  EdX, Open edX and their respective logos are trademarks or registered trademarks of edX Inc. </p>
+        </div>
+
+        <nav class="nav-legal" aria-label="Legal">
+          <ul>
+              <li class="nav-legal-01">
+                <a href="{{lms_base_url}}/privacy">Privacy Policy</a>
+              </li>
+              <li class="nav-legal-02">
+                <a href="{{lms_base_url}}/tos">Terms of Service</a>
+              </li>
+              <li class="nav-legal mobile" style="display:none;">
+                <a href="http://open.edx.org">Powered by Open edX</a>
+              </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer-about-openedx">
+        <a class="desktop" href="http://open.edx.org">
+          <img src="https://files.edx.org/openedx-logos/edx-openedx-logo-tag.png" alt="Powered by Open edX" width="140" />
+        </a>
+      </div>
+  </div>
+</footer>
+
