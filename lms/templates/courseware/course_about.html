@@ -178,7 +178,7 @@ from six import string_types
             ${_("Course is full")}
           </span>
         % elif invitation_only and not can_enroll:
-          <span style="cursor: pointer" onclick="window.location = 'mailto:info@enstructo.com?subject=${course.display_name_with_default_escaped} Enrollment Request&body=Please include the email associated with your Enstructo account (if different from reply address) and a brief description of why you are interested in this Course'" class="register disabled"><span style="text-transform:uppercase">${_("This course is invitation only")}</span> <br/><span style="font-size:80%;margin-top:4px;">click to request an invitation</span></span>
+          <span style="cursor: pointer" onclick="window.location = 'mailto:${settings.CONTACT_EMAIL}?subject=${course.display_name_with_default_escaped} Enrollment Request&body=Please include the email associated with your Enstructo account (if different from reply address) and a brief description of why you are interested in this Course'" class="register disabled"><span style="text-transform:uppercase">${_("This course is invitation only")}</span> <br/><span style="font-size:80%;margin-top:4px;">click to request an invitation</span></span>
         ## Shib courses need the enrollment button to be displayed even when can_enroll is False,
         ## because AnonymousUsers cause can_enroll for shib courses to be False, but we need them to be able to click
         ## so that they can register and become a real user that can enroll.
