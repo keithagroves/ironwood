@@ -56,14 +56,14 @@ if "id" in request.GET.keys():
         pass
     try:
         paypal_update = str(request.GET["PayPal"])
-        name = enst_list[id]["name"]
         enst_list[id]["paypal"] = paypal_update
         enst_info["paypal"] = paypal_update
+        id_str = str(id)
         if paypal_update != "null":
-            enst_pay_list[name] = paypal_update
+            enst_pay_list[id_str] = paypal_update
         else:
             try:
-                del enst_pay_list[name]
+                del enst_pay_list[id_str]
             except:
                 pass
         csv_utils.append(enst_pay_list)

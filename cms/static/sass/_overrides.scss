@@ -375,7 +375,7 @@ body.view-dashboard {
                                 height: 75px;
                                 align-self: flex-end;
                                 .note {
-                                    margin-left: 10px;
+                                    text-align: justify;
                                 }
                             }
                         }
@@ -484,7 +484,7 @@ body.view-dashboard {
                     padding-top: 7px;
                     border-top: 1px solid $border-gray;
                     span.note {
-                        margin: 2px 0;
+                        margin: 2px 5px;
                         display: inline-block;
                         font-size: 65%;
                         line-height: 1.7em;

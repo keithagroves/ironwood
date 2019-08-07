@@ -57,13 +57,13 @@ from django.conf import settings
           pass
       try:
           paypal_update = request.POST["paypal_update"]
-          name = enst_list[enst_id]["name"]
           enst_list[enst_id]["paypal"] = paypal_update
+          id_str = str(enst_id)
           if paypal_update != "null":
-              enst_pay_list[name] = paypal_update
+              enst_pay_list[id_str] = paypal_update
           else:
               try:
-                  del enst_pay_list[name]
+                  del enst_pay_list[id_str]
               except:
                   pass
           csv_utils.append(enst_pay_list)

@@ -79,6 +79,7 @@ $default: (0,1px,5px,0,rgba(0,0,0,0.1));
     text-decoration: none;
     @include noselect;
     @include trans-stand;
+    cursor: pointer;
     &:hover {
         background: $tColor !important;
         color: $bColor !important;
@@ -323,26 +324,35 @@ div.page-banner {
     }
 }
 
+ //Cookie Consent Popup
+.cc-grower {
+    position: fixed;
+    bottom: 0;
+    z-index: 500000;
+    opacity: 0.9;
+    .cc-btn {
+        @include no-shadow;
+        border: 1px solid $hover-blue !important;
+        border-radius: 3px !important;
+        padding: 7px 10px !important;
+        color: rgb(50,53,56) !important;
+        background: $hover-blue !important;
+        text-shadow: none !important;
+        text-decoration: none;
+        cursor: pointer;
+        @include noselect;
+        @include trans-stand;
+        &:hover {
+            background: rgb(50,53,56) !important;
+            color: $hover-blue !important;
+            text-decoration: none !important;
+       }
+    }
+}
+
 
 //////////////////////////////////////////
 //Header Overrides
-.cc-btn {
-    @include no-shadow;
-    border: 1px solid $hover-blue !important;
-    border-radius: 3px !important;
-    padding: 7px 10px !important;
-    color: rgb(50,53,56) !important;
-    background: $hover-blue !important;
-    text-shadow: none !important;
-    text-decoration: none;
-    @include noselect;
-    @include trans-stand;
-    &:hover {
-        background: rgb(50,53,56) !important;
-        color: $hover-blue !important;
-        text-decoration: none !important;
-    }
-}
 
 nav.wrapper-preview-menu {
     margin-top: 0;
@@ -1930,6 +1940,11 @@ label {
         }
         .page-content {
             div.page-content-main {
+                .course-message {
+                    .message-author {
+                        border-width: 3px;
+                    }
+                }
                 #main {
                     padding: 10px;
                     background: white;
@@ -1940,6 +1955,9 @@ label {
                         .fa-chevron-right {
                             transition: all 0.15s linear 0s;
                             color: $hover-blue;
+                        }
+                        .section-title {
+                            @include noselect;
                         }
                         ol.outline-item {
                             a:hover {
@@ -1978,6 +1996,11 @@ label {
                         color: $hover-blue;
                         text-decoration: none !important;
                     }
+                }
+                .section-title {
+                    text-transform: uppercase;
+                    font-weight: 300;
+                    font-size: 1.1rem;
                 }
             }
             .course-bookmarks { //Bookmark Page
@@ -2446,18 +2469,19 @@ div.container-fluid.wrapper-footer {
                     }
                     li.mobile {
                         display: inline-block;
-                        @media (max-width: 396px) {
+                        @media screen and (max-width: 396px) {
                             display: block !important;
+                        }
+                        &::before {
+                            font-weight: normal !important;
+                            color: $base-font-color !important;
+                            @media screen and (max-width: 396px) {
+                                display: none;
+                            }
                         }
                         a {
                             font-weight: bold;
                             text-decoration: none !important;
-                            &::before {
-                                font-weight: normal !important;
-                                @media (max-width: 396px) {
-                                    display: none;
-                                }
-                            }
                             &:hover {
                                 color: $hover-blue !important;
                                 &::before {
@@ -2699,6 +2723,7 @@ div.container-fluid.wrapper-footer {
                          display: inline-block;
                      }
                     .requests {
+                        display: inline-block;
                         font-size:90%;
                         padding-left: 0.38em;
                         font-family: $default-font;
@@ -2932,6 +2957,7 @@ footer#footer-openedx {
                 text-align: center;
                 li {
                     float: none !important;
+                    display: inline-block;
                     margin: 7.5px !important;
                 }
             }
@@ -2948,6 +2974,11 @@ footer#footer-openedx {
             margin-top: 10px;
             @media (max-width: 500px) {
                 font-size: 0.6em;
+            }
+        }
+        .nav-legal {
+            li::before {
+                margin: 0 2.5px;
             }
         }
     }
@@ -3012,18 +3043,19 @@ footer#footer-openedx {
                 display: table-row-group;
                 li.mobile {
                     display: inline-block !important;
-                    @media (max-width: 396px) {
+                    @media screen and (max-width: 396px) {
                         display: block !important;
                         text-align: center;
                     }
+                    &::before {
+                        font-weight: normal !important;
+                        color: $base-font-color !important;
+                        @media screen and (max-width: 396px) {
+                            display: none;
+                        }
+                    }
                     a {
                         font-weight: bold;
-                        &::before {
-                            font-weight: normal !important;
-                            @media (max-width: 396px) {
-                                display: none;
-                            }
-                        }
                         &:hover {
                             color: $hover-blue !important;
                             &::before {
