@@ -7,7 +7,7 @@ $border-gray: rgb(200,200,200);
 $base-gray: rgb(0,18,28);
 //$base-gray: rgb(40,40,40);
 $header-gray: rgb(100,100,100);
-$slate: rgb(0,60,94);
+$slate: rgb(242,101,34);
 $warning-red: rgb(176, 12, 26);
 
 //Variable Overrides
@@ -151,7 +151,7 @@ $quick: 0.25s;
         }
         &:hover {
             border: 1px solid #bebebe;
-            box-shadow: 0 1px 4px 0 rgba(0,121,188,0.4);
+            box-shadow: 0 1px 4px 0 rgba(242,101,34,0.4);
             border-bottom: 3px solid $hover-blue;
             margin-bottom: 0;
             #rating {
@@ -2587,10 +2587,10 @@ div.container-fluid.wrapper-footer {
               font-size: inherit;
               font-weight: 400;
               &:focus {
-                  border-color: #66afe9;
+                  border-color: #df7c12;
                   outline: 0;
-                  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
-                  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+                  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(242,101,34,.6);
+                  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(242,101,34,.6);
               }
          }
          select {
