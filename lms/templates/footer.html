@@ -47,7 +47,7 @@
                 </li>
               % endfor
               <li class="nav-legal mobile" style="display:none;">
-                <a href="${footer['openedx_link']['url']}">Powered by Open edX</a>
+                <a href="${footer['openedx_link']['url']}">Powered by The League</a>
               </li>
             </ul>
           </nav>
@@ -57,7 +57,7 @@
           ## Please leave this link and use one of the logos provided
           ## The OpenEdX link may be hidden when this view is served
           ## through an API to partner sites (such as marketing sites or blogs),
-          ## which are not technically powered by Open edX.
+          ## which are not technically powered by The League.
           % if not hide_openedx_link:
             <a href="${footer['openedx_link']['url']}">
               <img src="${footer['openedx_link']['image']}" alt="${footer['openedx_link']['title']}" width="140" />
@@ -114,7 +114,6 @@
           <ul>
             % for item_num, link in enumerate(footer['legal_links'], start=1):
               <li class="nav-legal-0${item_num}">
-                <a href="${link['url']}">${link['title']}</a>
               </li>
             % endfor
               <li class="nav-legal mobile" style="display:none;">
@@ -127,7 +126,7 @@
       ## Please leave this link and use one of the logos provided
       ## The OpenEdX link may be hidden when this view is served
       ## through an API to partner sites (such as marketing sites or blogs),
-      ## which are not technically powered by OpenEdX.
+      ## which are not technically powered by The League.
       % if not hide_openedx_link:
       <div class="footer-about-openedx">
         <a class="desktop" href="${footer['openedx_link']['url']}">
